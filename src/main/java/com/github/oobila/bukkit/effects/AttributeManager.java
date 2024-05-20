@@ -36,7 +36,7 @@ public class AttributeManager {
         return ATTRIBUTE_MAP.get(type).put(attribute.getName(), attribute);
     }
 
-    private static Collection<Attribute> getAttributes(Class<? extends Attribute> type) {
+    public static Collection<Attribute> getAttributes(Class<? extends Attribute> type) {
         if (ATTRIBUTE_MAP.containsKey(type)) {
             return ATTRIBUTE_MAP.get(type).values();
         } else {
@@ -44,7 +44,7 @@ public class AttributeManager {
         }
     }
 
-    private static Collection<Attribute> getAttributes() {
+    public static Collection<Attribute> getAttributes() {
         List<Attribute> allAttributes = new ArrayList<>();
         ATTRIBUTE_MAP.keySet().forEach(key ->
             allAttributes.addAll(ATTRIBUTE_MAP.get(key).values())
