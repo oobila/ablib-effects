@@ -37,9 +37,8 @@ public class AttributeManager {
         return ATTRIBUTE_MAP.values();
     }
 
-    @SuppressWarnings("unchecked")
-    public static <T extends Effect<T>> Collection<T> getEffects() {
-        return (Collection<T>) EFFECT_MAP.values();
+    public static Collection<Effect<?>> getEffects() {
+        return EFFECT_MAP.values();
     }
 
     public static Attribute remove(Attribute attribute) {
